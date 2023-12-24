@@ -13,7 +13,7 @@ variables:
   dockerRegistryServiceConnection: '4fe0a99a-4719-429a-bc15-da923c6741a4'
   imageRepository: 'marioimage'
   containerRegistry: 'mariocontainerregistry2023.azurecr.io'
-  dockerfilePath: '**/Dockerfile'
+  dockerfilePath: '$(Build.sourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
 
   # Agent VM image name
