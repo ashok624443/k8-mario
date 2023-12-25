@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: samplemario 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: samplemario
+  template:
+    metadata:
+      labels:
+        app: samplemario 
+    spec:
+      containers:
+        - name: samplemario 
+          image: mariocontainerregistry2023.azurecr.io/samplemario
+          ports:
+          - containerPort: 8080
